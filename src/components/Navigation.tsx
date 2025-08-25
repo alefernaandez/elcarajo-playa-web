@@ -15,8 +15,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
     { id: 'inicio', label: 'Inicio' },
     { id: 'carta', label: 'Carta' },
     { id: 'nosotros', label: 'Nosotros' },
-    { id: 'historia', label: 'Nuestra Historia' },
-    { id: 'galeria', label: 'Galería' },
+    { id: 'ubicacion', label: 'Dónde Estamos' },
     { id: 'contacto', label: 'Contacto' },
   ];
 

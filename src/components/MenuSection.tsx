@@ -95,23 +95,6 @@ const MenuSection = () => {
           </div>
         </div>
 
-        {/* Popular Items */}
-        <div className="mb-16">
-          <h3 className="font-script text-3xl font-bold text-ocean mb-6 text-center">
-            Lo Más Pedido en El Carajo
-          </h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {popularItems.map((item, index) => (
-              <Badge 
-                key={index}
-                className="bg-wood text-white hover:bg-wood-dark text-sm px-4 py-2 flex items-center gap-2"
-              >
-                <Star className="w-4 h-4" />
-                {item}
-              </Badge>
-            ))}
-          </div>
-        </div>
 
         {/* Menu Categories */}
         <div className="grid lg:grid-cols-3 gap-8">

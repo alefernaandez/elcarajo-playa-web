@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import MenuSection from '@/components/MenuSection';
-import AboutSection from '@/components/AboutSection';
-import StorySection from '@/components/StorySection';
-import GallerySection from '@/components/GallerySection';
+import AboutUsSection from '@/components/AboutUsSection';
+import LocationSection from '@/components/LocationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -14,7 +13,7 @@ const Index = () => {
   // Handle scroll to update current section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['inicio', 'carta', 'nosotros', 'historia', 'galeria', 'contacto'];
+      const sections = ['inicio', 'carta', 'nosotros', 'ubicacion', 'contacto'];
       const scrollY = window.scrollY;
       
       for (const section of sections) {
@@ -54,9 +53,8 @@ const Index = () => {
       <main>
         <HeroSection onNavigateToMenu={navigateToMenu} />
         <MenuSection />
-        <AboutSection />
-        <StorySection />
-        <GallerySection />
+        <AboutUsSection />
+        <LocationSection />
         <ContactSection />
       </main>
       

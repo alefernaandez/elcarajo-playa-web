@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-import heroImage from '@/assets/hero-beach-bar.jpg';
+import heroImage from '/lovable-uploads/bd4582cc-ddef-4282-9a7b-0cc2ff3c0b12.png';
 
 interface HeroSectionProps {
   onNavigateToMenu: () => void;
@@ -34,25 +34,13 @@ const HeroSection = ({ onNavigateToMenu }: HeroSectionProps) => {
             El mar, los barcos y la buena compañía
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               onClick={onNavigateToMenu}
               size="lg"
               className="bg-wood hover:bg-wood-dark text-white shadow-beer text-lg px-8 py-3 font-semibold transition-all duration-300 hover:scale-105"
             >
               Ver Carta
-            </Button>
-            
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-ocean-dark bg-white/10 backdrop-blur-sm text-lg px-8 py-3 font-semibold transition-all duration-300"
-              onClick={() => {
-                const element = document.getElementById('nosotros');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Conoce Nuestra Historia
             </Button>
           </div>
         </div>
