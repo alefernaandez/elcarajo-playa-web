@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+# El Carajo - Restaurant Website
 
-## Project info
+Un sitio web moderno para el restaurante español "El Carajo", con temática marinera andaluza.
 
-**URL**: https://lovable.dev/projects/b05688ff-73a1-4970-a746-9927e30f9865
+## 🚀 Deployment en Vercel - ¡LISTO!
 
-## How can I edit this code?
+### ✅ Configuración Completada
 
-There are several ways of editing your application.
+Tu aplicación está **100% preparada** para Vercel. Los archivos de configuración ya están creados:
+- ✅ `vercel.json` - Configuración de deployment
+- ✅ `client/vite.config.ts` - Build optimizado  
+- ✅ `client/tailwind.config.ts` - Estilos configurados
+- ✅ Build testado y funcionando correctamente
 
-**Use Lovable**
+### Pasos para desplegar:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b05688ff-73a1-4970-a746-9927e30f9865) and start prompting.
+1. **Subir a GitHub:**
+   ```bash
+   git add .
+   git commit -m "Ready for Vercel deployment"
+   git push origin main
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+2. **Importar en Vercel:**
+   - Ve a [vercel.com](https://vercel.com) e inicia sesión
+   - Clica "Add New" → "Project"  
+   - Selecciona tu repositorio de GitHub
+   - Vercel detectará automáticamente la configuración
 
-**Use your preferred IDE**
+3. **Deploy Automático:**
+   - Clica "Deploy" - ¡No necesitas cambiar nada!
+   - Tu sitio estará listo en 2-3 minutos
+   - Obtendrás una URL como `https://tu-proyecto.vercel.app`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🎯 Características del Deployment:
+- ⚡ Build optimizado (11.90s)
+- 📦 Code splitting automático
+- 🖼️ Imágenes optimizadas  
+- 🔄 Auto-deploy en cada push
+- 🌐 CDN global de Vercel
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Configuración Local de Desarrollo:
 
-Follow these steps:
+```bash
+# Instalar dependencias
+cd client
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Ejecutar en desarrollo
 npm run dev
+
+# Construir para producción
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 🏗️ Estructura del Proyecto
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `client/` - Aplicación React con Vite
+- `client/src/components/` - Componentes React
+- `client/src/assets/` - Imágenes y recursos
+- `vercel.json` - Configuración de deployment
 
-**Use GitHub Codespaces**
+## 🎨 Características
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- ✅ Diseño responsive y moderno
+- ✅ Temática marinera andaluza
+- ✅ Componentes de UI con Radix UI y Tailwind CSS
+- ✅ Optimizado para SEO
+- ✅ Animaciones suaves con Framer Motion
+- ✅ Preparado para deployment en Vercel
 
-## What technologies are used for this project?
+## 📱 Secciones del Sitio
 
-This project is built with:
+1. **Hero** - Presentación principal
+2. **Carta** - Menú de tapas y bebidas  
+3. **Nuestra Historia** - Historia del restaurante
+4. **Ubicación** - Mapa y información de contacto
+5. **Contacto** - Formas de comunicarse
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b05688ff-73a1-4970-a746-9927e30f9865) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+¡Tu restaurante estará online en minutos con Vercel! 🌊🍺
