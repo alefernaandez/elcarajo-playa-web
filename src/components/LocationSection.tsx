@@ -4,6 +4,16 @@ import { Separator } from '@/components/ui/separator';
 import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 import barInteriorImage from '@/assets/bar-interior.jpg';
 
+const Row = ({ icon, title, children }: { icon: JSX.Element, title: string, children: JSX.Element }) => (
+  <div className="grid grid-cols-[auto,1fr] gap-4 items-start justify-center">
+    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-sand">{icon}</div>
+    <div className="text-left">
+      <h3 className="font-semibold text-foreground mb-2">{title}</h3>
+      {children}
+    </div>
+  </div>
+);
+
 const LocationSection = () => {
   return (
     <section id="ubicacion" className="py-20 bg-sand-light">
@@ -36,52 +46,31 @@ const LocationSection = () => {
           <div>
             <Card className="shadow-soft hover:shadow-nautical transition-shadow duration-300">
               <CardContent className="p-6 space-y-6 text-center">
-                <div className="flex items-start gap-4 justify-center">
-                  <div className="bg-ocean text-white p-3 rounded-lg">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold text-foreground mb-2">Dirección</h3>
-                    <p className="text-muted-foreground">
-                      C. Rompeolas, 22<br />
-                      21130 Mazagón, Huelva
-                    </p>
-                  </div>
-                </div>
+                <Row icon={<MapPin className="w-6 h-6 text-ocean" />} title="Dirección">
+                  <p className="text-muted-foreground">C. Rompeolas, 22<br/>21130 Mazagón, Huelva</p>
+                </Row>
 
                 <Separator />
 
-                <div className="flex items-start gap-4 justify-center">
-                  <div className="bg-wood text-white p-3 rounded-lg">
-                    <Clock className="w-6 h-6" />
+                <Row icon={<Clock className="w-6 h-6 text-wood" />} title="Horario">
+                  <div className="text-muted-foreground space-y-1">
+                    <p><strong>Jueves:</strong> 12:00–16:00, 20:00–24:00</p>
+                    <p><strong>Viernes:</strong> 12:00–16:00, 20:00–24:00</p>
+                    <p><strong>Sábado:</strong> 12:00–16:00, 20:00–24:00</p>
+                    <p><strong>Domingo:</strong> 12:00–16:00, 20:00–24:00</p>
+                    <p><strong>Lunes:</strong> 12:00–16:00, 20:00–24:00</p>
+                    <p><strong>Martes:</strong> Cerrado</p>
+                    <p><strong>Miércoles:</strong> 20:00–24:00</p>
                   </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold text-foreground mb-2">Horario</h3>
-                    <div className="text-muted-foreground space-y-1">
-                      <p><strong>Jueves:</strong> 12:00–16:00, 20:00–24:00</p>
-                      <p><strong>Viernes:</strong> 12:00–16:00, 20:00–24:00</p>
-                      <p><strong>Sábado:</strong> 12:00–16:00, 20:00–24:00</p>
-                      <p><strong>Domingo:</strong> 12:00–16:00, 20:00–24:00</p>
-                      <p><strong>Lunes:</strong> 12:00–16:00, 20:00–24:00</p>
-                      <p><strong>Martes:</strong> Cerrado</p>
-                      <p><strong>Miércoles:</strong> 20:00–24:00</p>
-                    </div>
-                  </div>
-                </div>
+                </Row>
 
                 <Separator />
 
-                <div className="flex items-start gap-4 justify-center">
-                  <div className="bg-ocean-light text-white p-3 rounded-lg">
-                    <Phone className="w-6 h-6" />
+                <Row icon={<Phone className="w-6 h-6 text-ocean-light" />} title="Contacto">
+                  <div className="text-muted-foreground space-y-1">
+                    <p><strong>Teléfono:</strong> 643 89 48 95</p>
                   </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold text-foreground mb-2">Contacto</h3>
-                    <div className="text-muted-foreground space-y-1">
-                      <p><strong>Teléfono:</strong> 643 89 48 95</p>
-                    </div>
-                  </div>
-                </div>
+                </Row>
               </CardContent>
             </Card>
 
