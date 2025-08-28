@@ -55,13 +55,13 @@ const LocationSection = () => {
 
                 <Row icon={<Clock className="w-6 h-6 text-wood" />} title="Horario">
                   <div className="text-muted-foreground space-y-1">
+                    <p><strong>Lunes:</strong> 12:00–16:00, 20:00–24:00</p>
+                    <p><strong>Martes:</strong> Cerrado</p>
+                    <p><strong>Miércoles:</strong> 20:00–24:00</p>
                     <p><strong>Jueves:</strong> 12:00–16:00, 20:00–24:00</p>
                     <p><strong>Viernes:</strong> 12:00–16:00, 20:00–24:00</p>
                     <p><strong>Sábado:</strong> 12:00–16:00, 20:00–24:00</p>
                     <p><strong>Domingo:</strong> 12:00–16:00, 20:00–24:00</p>
-                    <p><strong>Lunes:</strong> 12:00–16:00, 20:00–24:00</p>
-                    <p><strong>Martes:</strong> Cerrado</p>
-                    <p><strong>Miércoles:</strong> 20:00–24:00</p>
                   </div>
                 </Row>
 
