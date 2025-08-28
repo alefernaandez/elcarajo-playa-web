@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Phone, Navigation, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 
 const LocationSection = () => {
   return (
@@ -17,7 +17,7 @@ const LocationSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Information */}
+          {/* Contact Information (Dirección, Horarios, Teléfono) */}
           <div className="space-y-8">
             <div className="space-y-6">
               <Card className="shadow-soft hover:shadow-nautical transition-shadow duration-300">
@@ -67,8 +67,7 @@ const LocationSection = () => {
                       <h3 className="font-semibold text-foreground mb-2">Contacto</h3>
                       <div className="text-muted-foreground space-y-1">
                         <p><strong>Teléfono:</strong> +34 952 123 456</p>
-                        <p><strong>WhatsApp:</strong> +34 666 789 012</p>
-                        <p><strong>Email:</strong> hola@elcarajo.com</p>
+                        <p><strong>Horario cocina:</strong> cierra 1h antes</p>
                       </div>
                     </div>
                   </div>
@@ -85,56 +84,17 @@ const LocationSection = () => {
                 <Navigation className="w-5 h-5 mr-2" />
                 Cómo Llegar
               </Button>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <Button 
-                  variant="outline"
-                  className="border-ocean text-ocean hover:bg-ocean hover:text-white"
-                  onClick={() => window.open('tel:+34952123456')}
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Llamar
-                </Button>
-                
-                <Button 
-                  variant="outline"
-                  className="border-wood text-wood hover:bg-wood hover:text-white"
-                  onClick={() => window.open('https://wa.me/34666789012', '_blank')}
-                >
-                  WhatsApp
-                </Button>
-              </div>
+              <Button 
+                variant="outline"
+                className="w-full border-ocean text-ocean hover:bg-ocean hover:text-white"
+                onClick={() => window.open('tel:+34952123456')}
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Llamar
+              </Button>
             </div>
 
-            {/* Social Media */}
-            <Card className="bg-gradient-sunset border-none shadow-beer">
-              <CardContent className="p-6 text-center">
-                <h3 className="font-script text-xl text-ocean-dark mb-4">
-                  Síguenos y Comparte Tu Momento en El Carajo
-                </h3>
-                <div className="flex justify-center gap-4 mb-4">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-ocean hover:bg-ocean hover:text-white"
-                    onClick={() => window.open('https://instagram.com/elcarajofuengirola', '_blank')}
-                  >
-                    <Instagram className="w-6 h-6" />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-ocean hover:bg-ocean hover:text-white"
-                    onClick={() => window.open('https://facebook.com/elcarajofuengirola', '_blank')}
-                  >
-                    <Facebook className="w-6 h-6" />
-                  </Button>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Etiquétanos en tus fotos: <strong>#ElCarajo #BarDePlaya</strong>
-                </p>
-              </CardContent>
-            </Card>
+            {/* No social/media blocks */}
           </div>
 
           {/* Map */}

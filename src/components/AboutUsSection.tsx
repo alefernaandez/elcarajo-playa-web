@@ -78,10 +78,10 @@ const AboutUsSection = () => {
               </CardContent>
             </Card>
             
-            {/* Decorative Quote */}
+            {/* Dato Curioso breve */}
             <div className="absolute -bottom-6 -right-6 bg-wood text-white p-6 rounded-lg shadow-beer max-w-xs">
               <p className="font-script text-lg italic">
-                "Donde el mar se encuentra con la buena mesa"
+                Dato curioso: nuestro mapa tiene firmas de +200 viajeros
               </p>
             </div>
           </div>
