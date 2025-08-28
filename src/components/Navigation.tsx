@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import barInteriorImage from '@/assets/bar-interior.jpg';
 
 interface NavigationProps {
   currentSection: string;
@@ -33,10 +34,11 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div 
-            className="font-script text-2xl font-bold text-ocean cursor-pointer hover:text-ocean-light transition-colors"
+            className="flex items-center gap-3 cursor-pointer"
             onClick={() => scrollToSection('inicio')}
           >
-            El Carajo
+            <img src={barInteriorImage} alt="Logo" className="w-10 h-10 rounded object-cover" />
+            <span className="font-script text-2xl font-bold text-ocean hover:text-ocean-light transition-colors">El Carajo</span>
           </div>
 
           {/* Desktop Navigation */}

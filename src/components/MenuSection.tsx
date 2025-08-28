@@ -83,7 +83,6 @@ const MenuSection = () => {
           </Card>
         </div>
 
-
         {/* No category grid here; redirigimos a páginas específicas */}
 
         {/* Banner de alergias más original */}
@@ -97,11 +96,6 @@ const MenuSection = () => {
               <p className="text-sm text-muted-foreground">
                 Dínoslo y te guiamos como buen capitán de mesa. ¡Sin sorpresas, solo disfrute!
               </p>
-              <div className="ml-auto">
-                <Button variant="outline" className="border-ocean text-ocean hover:bg-ocean hover:text-white">
-                  Consultar al equipo
-                </Button>
-              </div>
             </CardContent>
           </Card>
         </div>
