@@ -1,8 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Anchor, Heart, Users, MapPin, Clock, Waves } from 'lucide-react';
-import { FEATURES, TIMELINE } from '@/lib/content';
+import { Anchor, Heart, Users } from 'lucide-react';
+import { FEATURES } from '@/lib/content';
 import barInteriorImage from '@/assets/bar-interior.jpg';
-import logoImage from '@/assets/el-carajo-logo.jpg';
 
 const AboutUsSection = () => {
   const featureIconMap: Record<string, JSX.Element> = {
@@ -11,11 +10,7 @@ const AboutUsSection = () => {
     Users: <Users className="w-8 h-8 text-ocean-light" />,
   };
 
-  const timelineIconMap: Record<string, JSX.Element> = {
-    Waves: <Waves className="w-6 h-6" />,
-    MapPin: <MapPin className="w-6 h-6" />,
-    Clock: <Clock className="w-6 h-6" />,
-  };
+  
 
   return (
     <section id="nosotros" className="py-20 bg-background">
@@ -92,116 +87,7 @@ const AboutUsSection = () => {
           </div>
         </div>
 
-        {/* Second Section: Our Story */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Logo and Visual */}
-          <div className="space-y-6 order-2 lg:order-1">
-            <Card className="overflow-hidden shadow-nautical">
-              <CardContent className="p-0">
-                <img 
-                  src={logoImage}
-                  alt="Logo El Carajo sobre madera"
-                  className="w-full h-80 object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </CardContent>
-            </Card>
-
-            {/* Quote Card */}
-            <Card className="bg-gradient-sunset border-none shadow-beer">
-              <CardContent className="p-6">
-                <blockquote className="font-script text-xl text-ocean-dark italic mb-4">
-                  "No es solo un bar, es el punto de encuentro donde las historias 
-                  del mar se mezclan con los sabores de la tierra"
-                </blockquote>
-                <cite className="text-sm text-muted-foreground">
-                  - Filosofía de El Carajo
-                </cite>
-              </CardContent>
-            </Card>
-
-            {/* Fun Fact */}
-            <div className="bg-ocean text-white p-6 rounded-lg shadow-nautical">
-              <h4 className="font-semibold mb-2 flex items-center gap-2">
-                <MapPin className="w-5 h-5" />
-                Dato Curioso
-              </h4>
-              <p className="text-sm opacity-90">
-                Nuestro mapa mundial ha sido firmado por más de 200 viajeros 
-                de diferentes países que han pasado por El Carajo. ¡Cada firma 
-                cuenta una historia!
-              </p>
-            </div>
-          </div>
-
-          {/* Story Content */}
-          <div className="space-y-8 order-1 lg:order-2">
-            <h3 className="font-script text-4xl font-bold text-ocean">
-              Nuestra Historia
-            </h3>
-            
-            <div className="prose prose-lg">
-              <p className="text-muted-foreground leading-relaxed">
-                El nombre <span className="font-semibold text-ocean">"El Carajo"</span> surgió 
-                de forma espontánea, como las mejores cosas de la vida. Era la expresión que 
-                más usábamos cuando alguien preguntaba dónde íbamos a montar nuestro bar soñado: 
-                <em>"¡En el carajo!"</em> - decíamos entre risas.
-              </p>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                Pero <em>"el carajo"</em> en términos marineros también significa <strong>la cofa</strong>, 
-                esa plataforma en lo alto del mástil desde donde los marineros otean el horizonte. 
-                Y eso es exactamente lo que queríamos: un lugar desde donde contemplar la vida 
-                con perspectiva, rodeados de buena gente.
-              </p>
-
-              <p className="text-muted-foreground leading-relaxed">
-                Cada detalle de nuestro bar tiene su historia. El mapa mundial pintado en la pared 
-                representa todos los viajes que soñamos hacer, los barcos de madera son recuerdos 
-                de pescadores locales, y cada barril tiene una historia que contar.
-              </p>
-            </div>
-
-            {/* Timeline */}
-            <div className="space-y-6">
-              {TIMELINE.map((item, index) => (
-                <div key={index} className="flex gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center group-hover:bg-ocean-dark transition-colors">
-                    {timelineIconMap[item.iconName]}
-                  </div>
-                  <div className="flex-grow">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h4 className="font-semibold text-ocean">{item.title}</h4>
-                      <span className="text-sm bg-sand text-ocean px-2 py-1 rounded">{item.year}</span>
-                    </div>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Quote */}
-        <div className="text-center mt-20 max-w-3xl mx-auto">
-          <blockquote className="font-script text-2xl md:text-3xl text-ocean italic leading-relaxed">
-            "En El Carajo no solo sirves una cerveza, creas memorias. 
-            Aquí cada atardecer es una excusa perfecta para brindar por la vida."
-          </blockquote>
-          <cite className="block mt-4 text-muted-foreground">- Equipo El Carajo</cite>
-        </div>
-
-        {/* Final Message */}
-        <div className="text-center mt-16 max-w-4xl mx-auto">
-          <div className="bg-white p-8 rounded-xl shadow-soft">
-            <h3 className="font-script text-2xl text-ocean mb-4">La Historia Continúa</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Cada día escribimos nuevas páginas de esta historia junto a nuestros clientes. 
-              Porque El Carajo no es solo nuestro sueño hecho realidad, es el lugar donde 
-              se crean las mejores memorias de quienes nos visitan. 
-              <strong className="text-ocean"> ¡Y tu historia aquí apenas está comenzando!</strong>
-            </p>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

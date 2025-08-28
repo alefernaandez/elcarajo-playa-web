@@ -40,7 +40,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contacto" className="py-20 bg-sand-light">
+    <section id="contacto" className="pt-20 pb-28 md:pb-36 bg-sand-light">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
