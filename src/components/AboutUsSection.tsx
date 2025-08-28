@@ -21,9 +21,9 @@ const AboutUsSection = () => {
         </div>
 
         {/* Grid: izquierda (texto + mini-cards) / derecha (imagen) */}
-        <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-12">
-          {/* Columna izquierda */}
-          <div className="h-full flex flex-col">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+          {/* Columna izquierda sincr. de altura */}
+          <div className="min-h-[360px] md:min-h-[400px] lg:min-h-[440px] flex flex-col justify-between">
             <div className="text-center max-w-xl mx-auto">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
                 El carajo situado en un enclave de tierra, mar, vida y sol...donde la gastronomía es su bandera. 
@@ -36,11 +36,10 @@ const AboutUsSection = () => {
             </div>
 
             {/* Mini-cards debajo del texto */}
-            <div className="mt-8 grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <div className="mt-8 grid grid-cols-3 gap-6 max-w-3xl mx-auto">
               {FEATURES.map((feature, index) => (
                 <div key={index} className="text-center group">
                   <div className="mb-2 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                    {/* icono un poco más pequeño visualmente */}
                     <div className="scale-90">{featureIconMap[feature.iconName]}</div>
                   </div>
                   <h3 className="text-sm font-semibold text-foreground mb-1">{feature.title}</h3>
@@ -50,15 +49,15 @@ const AboutUsSection = () => {
             </div>
           </div>
 
-          {/* Columna derecha: imagen ocupa altura total */}
-          <div className="relative h-full">
-            <Card className="overflow-hidden shadow-nautical h-full">
-              <CardContent className="p-0 h-full">
+          {/* Columna derecha: imagen con altura sincronizada */}
+          <div className="relative">
+            <Card className="overflow-hidden shadow-nautical">
+              <CardContent className="p-0">
                 <img 
                   src={'/Sobre nosotros.jpg'}
                   onError={(e) => { (e.currentTarget as HTMLImageElement).src = barInteriorImage; }}
                   alt="Sobre nosotros"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[360px] md:h-[400px] lg:h-[440px] object-cover"
                 />
               </CardContent>
             </Card>
