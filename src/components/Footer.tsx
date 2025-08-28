@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MapPin, Phone } from 'lucide-react';
+import { Instagram, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,14 +24,14 @@ const Footer = () => {
             <div className="space-y-3 text-white/80">
               <p className="flex items-center justify-center gap-2 text-sm">
                 <MapPin className="w-4 h-4" />
-                Paseo Marítimo, 42 - Torremolinos
+                C. Rompeolas, 22 - 21130 Mazagón, Huelva
               </p>
               <p className="flex items-center justify-center gap-2 text-sm">
                 <Phone className="w-4 h-4" />
-                +34 952 123 456
+                643 89 48 95
               </p>
               <p className="text-sm">
-                Abierto todos los días: 10:00 - 02:00
+                Jue-Lun 12:00–16:00, 20:00–24:00 · Mar cerrado · Mié 20:00–24:00
               </p>
             </div>
           </div>
@@ -41,20 +41,12 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Síguenos</h4>
             <div className="flex justify-center md:justify-end gap-4 mb-4">
               <a 
-                href="https://instagram.com/elcarajo_bar" 
+                href="https://www.instagram.com/elcarajo_mazagon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://facebook.com/elcarajo.bar" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
               </a>
             </div>
             <p className="text-sm text-white/60">

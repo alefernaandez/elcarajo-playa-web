@@ -21,8 +21,8 @@ const AboutUsSection = () => {
             Sobre Nosotros
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Una historia de pasión, mar y buena comida que comenzó con un sueño 
-            y se convirtió en el hogar de muchos
+            El carajo situado en un enclave de tierra, mar, vida y sol...donde la gastronomía es su bandera. 
+            Que la cruz en tu mapa te guíe hacia nosotros! Buena proa, marinero.
           </p>
         </div>
 
@@ -31,24 +31,9 @@ const AboutUsSection = () => {
           {/* Text Content */}
           <div className="space-y-6">
             <div className="space-y-4 text-muted-foreground">
-              <p className="text-lg leading-relaxed">
-                <span className="font-semibold text-ocean">El Carajo</span> nació de la pasión por 
-                la buena comida, la cerveza fría y las tertulias frente al mar. Nuestro nombre, 
-                tan auténtico como desenfadado, refleja el espíritu alegre y directo de Andalucía.
-              </p>
-              
               <p className="leading-relaxed">
-                Cada rincón de nuestro bar cuenta una historia marinera. Desde el mapa del mundo 
-                pintado en la pared hasta los barriles que nos recuerdan los viajes por los mares, 
-                todo está pensado para transportarte a esa sensación de libertad que solo el océano 
-                puede dar.
-              </p>
-              
-              <p className="leading-relaxed">
-                Aquí no solo servimos las mejores tapas del sur y la cerveza más fría de la costa, 
-                sino que creamos un espacio donde cada cliente se convierte en parte de nuestra familia. 
-                Porque al final, lo que realmente importa es la buena compañía y los momentos que 
-                compartimos alrededor de una mesa.
+                El carajo se le llama a la pequeña canastilla que se encontraba en el palo mayor de las antiguas naves; 
+                a los marineros se les mandaba al carajo en forma de castigo, de ahí la expresión.
               </p>
             </div>
 

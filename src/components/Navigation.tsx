@@ -60,7 +60,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
           {/* Social Icons & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/elcarajo_mazagon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-ocean transition-colors"
@@ -104,7 +104,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
               ))}
               <div className="flex items-center space-x-4 pt-4 border-t border-sand">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/elcarajo_mazagon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-ocean transition-colors"
