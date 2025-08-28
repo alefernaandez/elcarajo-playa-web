@@ -9,14 +9,14 @@ const LocationSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-script text-5xl md:text-6xl font-bold text-ocean mb-4">
-            Dónde Estamos
+            Ubicación
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Estamos a un paso de la playa, ven que la cerveza ya está fría
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Information (Dirección, Horarios, Teléfono) */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -98,7 +98,7 @@ const LocationSection = () => {
           </div>
 
           {/* Map */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <Card className="overflow-hidden shadow-nautical">
               <CardContent className="p-0">
                 <div className="w-full h-96 bg-sand-light relative">
@@ -127,33 +127,7 @@ const LocationSection = () => {
               </CardContent>
             </Card>
 
-            {/* Additional Info */}
-            <div className="grid grid-cols-2 gap-4">
-              <Card className="shadow-soft">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl mb-2">🏖️</div>
-                  <h4 className="font-semibold text-ocean mb-1">Playa</h4>
-                  <p className="text-sm text-muted-foreground">A 50 metros</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="shadow-soft">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl mb-2">🚗</div>
-                  <h4 className="font-semibold text-ocean mb-1">Parking</h4>
-                  <p className="text-sm text-muted-foreground">Zona azul cercana</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Welcome Message */}
-            <div className="bg-ocean text-white p-6 rounded-lg shadow-nautical text-center">
-              <h4 className="font-script text-xl mb-2">¡Te Esperamos!</h4>
-              <p className="text-sm opacity-90">
-                Ven cuando quieras, aquí siempre hay sitio para un amigo. 
-                La cerveza está fría y las tapas listas para compartir.
-              </p>
-            </div>
+            {/* Removed extra cards and welcome message */}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Instagram, Facebook } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface NavigationProps {
@@ -15,8 +15,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
     { id: 'inicio', label: 'Inicio' },
     { id: 'carta', label: 'Carta' },
     { id: 'nosotros', label: 'Nosotros' },
-    { id: 'ubicacion', label: 'Dónde Estamos' },
-    { id: 'contacto', label: 'Contacto' },
+    { id: 'ubicacion', label: 'Ubicación' },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -41,13 +40,13 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-ocean relative",
+                  "text-base md:text-lg font-semibold tracking-wide transition-colors hover:text-ocean relative",
                   currentSection === item.id 
                     ? "text-ocean after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-0.5 after:bg-ocean" 
                     : "text-muted-foreground"
@@ -67,14 +66,6 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
               className="text-muted-foreground hover:text-ocean transition-colors"
             >
               <Instagram size={20} />
-            </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-ocean transition-colors"
-            >
-              <Facebook size={20} />
             </a>
             <Button 
               onClick={() => scrollToSection('carta')}
@@ -119,14 +110,6 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
                   className="text-muted-foreground hover:text-ocean transition-colors"
                 >
                   <Instagram size={20} />
-                </a>
-                <a 
-                  href="https://facebook.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-ocean transition-colors"
-                >
-                  <Facebook size={20} />
                 </a>
                 <Button 
                   onClick={() => scrollToSection('carta')}
