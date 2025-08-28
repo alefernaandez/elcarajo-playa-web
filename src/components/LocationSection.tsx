@@ -34,7 +34,7 @@ const LocationSection = () => {
             <Card className="overflow-hidden shadow-nautical">
               <CardContent className="p-0">
                 <img 
-                  src={'/assets/ubicacion.jpg'}
+                  src={'/Ubicacion.jpg'}
                   onError={(e) => { (e.currentTarget as HTMLImageElement).src = barInteriorImage; }}
                   alt="Ubicación"
                   className="w-full h-[500px] object-cover"

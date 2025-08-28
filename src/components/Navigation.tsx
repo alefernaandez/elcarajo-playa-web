@@ -36,7 +36,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => scrollToSection('inicio')}
           >
-            <img src="/assets/Logo.png" alt="Logo El Carajo" className="w-10 h-10 rounded object-cover" />
+            <img src="/Logo.png" alt="Logo El Carajo" className="w-10 h-10 rounded object-cover" />
           </div>
 
           {/* Desktop Navigation */}
