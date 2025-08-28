@@ -39,8 +39,9 @@ const AboutUsSection = () => {
             <Card className="overflow-hidden shadow-nautical h-full">
               <CardContent className="p-0 h-full">
                 <img 
-                  src={barInteriorImage}
-                  alt="Interior de El Carajo con decoración marinera"
+                  src={'/assets/Sobre nosotros.jpg'}
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = barInteriorImage; }}
+                  alt="Sobre nosotros"
                   className="w-full h-full object-cover"
                 />
               </CardContent>

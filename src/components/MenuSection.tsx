@@ -38,7 +38,8 @@ const MenuSection = () => {
                 aria-label="Ver carta de bebidas"
               >
                 <img 
-                  src={coldBeerImage} 
+                  src={"/assets/Bebida.jpg"}
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = coldBeerImage; }}
                   alt="Carta de bebidas"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -64,7 +65,8 @@ const MenuSection = () => {
                 aria-label="Ver carta de comida"
               >
                 <img 
-                  src={tapasImage} 
+                  src={"/assets/Comida.jpg"}
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = tapasImage; }}
                   alt="Carta de comida"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
