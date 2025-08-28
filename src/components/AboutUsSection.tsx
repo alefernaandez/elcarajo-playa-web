@@ -20,8 +20,8 @@ const AboutUsSection = () => {
           </h2>
         </div>
 
-        {/* Texto izquierda + Imagen derecha con alturas iguales */}
-        <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-12">
+        {/* Texto izquierda + Imagen derecha con alturas controladas */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
           <div className="h-full flex items-center justify-center text-center">
             <div className="max-w-xl">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
@@ -35,14 +35,14 @@ const AboutUsSection = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <Card className="overflow-hidden shadow-nautical h-full">
-              <CardContent className="p-0 h-full">
+          <div className="relative flex justify-center">
+            <Card className="overflow-hidden shadow-nautical">
+              <CardContent className="p-0">
                 <img 
                   src={'/Sobre nosotros.jpg'}
                   onError={(e) => { (e.currentTarget as HTMLImageElement).src = barInteriorImage; }}
                   alt="Sobre nosotros"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[340px] md:h-[400px] lg:h-[440px] object-cover"
                 />
               </CardContent>
             </Card>
