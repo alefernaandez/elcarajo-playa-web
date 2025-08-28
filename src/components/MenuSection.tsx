@@ -3,48 +3,13 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Beer, Utensils } from 'lucide-react';
 import coldBeerImage from '@/assets/cold-beer.jpg';
 import tapasImage from '@/assets/spanish-tapas.jpg';
+import { MENU_CATEGORIES } from '@/lib/content';
 
 const MenuSection = () => {
-  const menuCategories = [
-    {
-      id: 'tapas',
-      title: 'Tapas Clásicas',
-      icon: <Utensils className="w-5 h-5" />,
-      items: [
-        { name: 'Jamón Ibérico', price: '12€', description: 'Cortado a cuchillo, con pan tostado' },
-        { name: 'Boquerones en vinagre', price: '6€', description: 'Frescos del día, con ajo y perejil' },
-        { name: 'Patatas bravas', price: '5€', description: 'Con salsa brava casera' },
-        { name: 'Croquetas de jamón', price: '7€', description: '4 unidades, bechamel cremosa' },
-        { name: 'Pulpo a la gallega', price: '14€', description: 'Con patatas, pimentón y aceite' },
-        { name: 'Tortilla española', price: '6€', description: 'Jugosa, con cebolla' }
-      ]
-    },
-    {
-      id: 'raciones',
-      title: 'Raciones',
-      icon: <Utensils className="w-5 h-5" />,
-      items: [
-        { name: 'Fritura de pescado', price: '16€', description: 'Boquerones, sardinas y calamares' },
-        { name: 'Paella marinera', price: '18€', description: 'Para 2 personas, arroz bomba' },
-        { name: 'Secreto ibérico', price: '15€', description: 'A la plancha con pimientos' },
-        { name: 'Tabla de quesos', price: '12€', description: 'Manchego, cabrales y membrillo' },
-        { name: 'Ensaladilla rusa', price: '8€', description: 'Receta de la abuela' }
-      ]
-    },
-    {
-      id: 'bebidas',
-      title: 'Bebidas',
-      icon: <Beer className="w-5 h-5" />,
-      items: [
-        { name: 'Caña', price: '2€', description: 'Bien fría, siempre' },
-        { name: 'Tinto de verano', price: '3€', description: 'Con gaseosa, limón y hielo' },
-        { name: 'Sangría', price: '4€', description: 'Receta secreta de la casa' },
-        { name: 'Rebujito', price: '4€', description: 'Manzanilla, sprite y yerbabuena' },
-        { name: 'Agua con gas', price: '2€', description: 'Solán de Cabras' },
-        { name: 'Refrescos', price: '2.5€', description: 'Coca-Cola, Fanta, Sprite' }
-      ]
-    }
-  ];
+  const iconByName: Record<string, JSX.Element> = {
+    Utensils: <Utensils className="w-5 h-5" />,
+    Beer: <Beer className="w-5 h-5" />,
+  };
 
   const popularItems = [
     'Jamón Ibérico',
@@ -98,11 +63,11 @@ const MenuSection = () => {
 
         {/* Menu Categories */}
         <div className="grid lg:grid-cols-3 gap-8">
-          {menuCategories.map((category) => (
+          {MENU_CATEGORIES.map((category) => (
             <Card key={category.id} className="shadow-soft hover:shadow-nautical transition-shadow duration-300">
               <CardHeader className="text-center pb-4">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="text-ocean">{category.icon}</div>
+                  <div className="text-ocean">{iconByName[category.iconName]}</div>
                   <CardTitle className="font-script text-2xl text-ocean">
                     {category.title}
                   </CardTitle>

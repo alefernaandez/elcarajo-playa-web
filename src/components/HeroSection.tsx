@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-import heroImage from '/lovable-uploads/bd4582cc-ddef-4282-9a7b-0cc2ff3c0b12.png';
+import heroImage from '/assets/hero.png';
 
 interface HeroSectionProps {
   onNavigateToMenu: () => void;
@@ -14,7 +14,7 @@ const HeroSection = ({ onNavigateToMenu }: HeroSectionProps) => {
         <img 
           src={heroImage} 
           alt="El Carajo Beach Bar"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105 md:scale-100 transition-transform duration-1000"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
       </div>

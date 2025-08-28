@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import MenuSection from '@/components/MenuSection';
@@ -10,29 +10,30 @@ import Footer from '@/components/Footer';
 const Index = () => {
   const [currentSection, setCurrentSection] = useState('inicio');
 
-  // Handle scroll to update current section
+  // Scrollspy con IntersectionObserver
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['inicio', 'carta', 'nosotros', 'ubicacion', 'contacto'];
-      const scrollY = window.scrollY;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const elementTop = rect.top + scrollY;
-          const elementHeight = rect.height;
-          
-          if (scrollY >= elementTop - 100 && scrollY < elementTop + elementHeight - 100) {
-            setCurrentSection(section);
-            break;
+    const sectionIds = ['inicio', 'carta', 'nosotros', 'ubicacion', 'contacto'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCurrentSection(entry.target.id);
           }
-        }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -60% 0px',
+        threshold: 0.4,
       }
-    };
+    );
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const navigateToMenu = () => {

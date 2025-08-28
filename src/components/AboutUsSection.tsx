@@ -1,47 +1,21 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Anchor, Heart, Users, MapPin, Clock, Waves } from 'lucide-react';
+import { FEATURES, TIMELINE } from '@/lib/content';
 import barInteriorImage from '@/assets/bar-interior.jpg';
 import logoImage from '@/assets/el-carajo-logo.jpg';
 
 const AboutUsSection = () => {
-  const features = [
-    {
-      icon: <Anchor className="w-8 h-8 text-ocean" />,
-      title: 'Tradición Marinera',
-      description: 'Inspirados en la cultura marinera andaluza, cada detalle cuenta una historia del mar.'
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-wood" />,
-      title: 'Ambiente Familiar',
-      description: 'Un lugar donde todos se sienten como en casa, con el calor humano del sur.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-ocean-light" />,
-      title: 'Buena Compañía',
-      description: 'El punto de encuentro perfecto para compartir momentos únicos frente al mar.'
-    }
-  ];
+  const featureIconMap: Record<string, JSX.Element> = {
+    Anchor: <Anchor className="w-8 h-8 text-ocean" />,
+    Heart: <Heart className="w-8 h-8 text-wood" />,
+    Users: <Users className="w-8 h-8 text-ocean-light" />,
+  };
 
-  const timeline = [
-    {
-      year: '2018',
-      title: 'El Sueño Comienza',
-      description: 'Todo empezó con una idea loca: abrir un bar donde la gente se sintiera como en casa, pero con vistas al mar.',
-      icon: <Waves className="w-6 h-6" />
-    },
-    {
-      year: '2019',
-      title: 'Primeros Pasos',
-      description: 'Encontramos este rincón perfecto y comenzamos a darle forma a nuestro sueño, pintando mapas y coleccionando barcos.',
-      icon: <MapPin className="w-6 h-6" />
-    },
-    {
-      year: '2020',
-      title: 'Abrimos las Puertas',
-      description: 'A pesar de los tiempos difíciles, abrimos con una promesa: la mejor cerveza fría y las tapas más auténticas.',
-      icon: <Clock className="w-6 h-6" />
-    }
-  ];
+  const timelineIconMap: Record<string, JSX.Element> = {
+    Waves: <Waves className="w-6 h-6" />,
+    MapPin: <MapPin className="w-6 h-6" />,
+    Clock: <Clock className="w-6 h-6" />,
+  };
 
   return (
     <section id="nosotros" className="py-20 bg-background">
@@ -85,10 +59,10 @@ const AboutUsSection = () => {
 
             {/* Features Grid */}
             <div className="grid sm:grid-cols-3 gap-6 pt-6">
-              {features.map((feature, index) => (
+              {FEATURES.map((feature, index) => (
                 <div key={index} className="text-center group">
                   <div className="mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+                    {featureIconMap[feature.iconName]}
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
@@ -189,10 +163,10 @@ const AboutUsSection = () => {
 
             {/* Timeline */}
             <div className="space-y-6">
-              {timeline.map((item, index) => (
+              {TIMELINE.map((item, index) => (
                 <div key={index} className="flex gap-4 group">
                   <div className="flex-shrink-0 w-12 h-12 bg-ocean text-white rounded-full flex items-center justify-center group-hover:bg-ocean-dark transition-colors">
-                    {item.icon}
+                    {timelineIconMap[item.iconName]}
                   </div>
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-2">
