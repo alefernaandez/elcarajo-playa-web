@@ -1,21 +1,27 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Utensils } from 'lucide-react';
 
-const tapasClasicas = [
-  { name: 'Jamón Ibérico', price: '12€', description: 'Cortado a cuchillo, con pan tostado' },
-  { name: 'Boquerones en vinagre', price: '6€', description: 'Frescos del día, con ajo y perejil' },
-  { name: 'Patatas bravas', price: '5€', description: 'Con salsa brava casera' },
-  { name: 'Croquetas de jamón', price: '7€', description: '4 unidades, bechamel cremosa' },
-  { name: 'Pulpo a la gallega', price: '14€', description: 'Con patatas, pimentón y aceite' },
-  { name: 'Tortilla española', price: '6€', description: 'Jugosa, con cebolla' }
-];
-
-const raciones = [
-  { name: 'Fritura de pescado', price: '16€', description: 'Boquerones, sardinas y calamares' },
-  { name: 'Paella marinera', price: '18€', description: 'Para 2 personas, arroz bomba' },
-  { name: 'Secreto ibérico', price: '15€', description: 'A la plancha con pimientos' },
-  { name: 'Tabla de quesos', price: '12€', description: 'Manchego, cabrales y membrillo' },
-  { name: 'Ensaladilla rusa', price: '8€', description: 'Receta de la abuela' }
+const tapasYRaciones = [
+  { name: 'Tortilla de patatas con cebolla caramelizada', price: '4,50€' },
+  { name: 'Patatas bravas', price: '5,00€' },
+  { name: 'Pollo del Carajo', price: '7,00€' },
+  { name: 'Pollo en salsa cabrales', price: '5,00€' },
+  { name: 'Ensaladilla de camarones', price: '5,00€' },
+  { name: 'Nachos', price: '9,00€' },
+  { name: 'Flamenquín', price: '11,00€' },
+  { name: 'Langostino con bechamel rebozado', price: '8,50€' },
+  { name: 'Champiñones rellenos', price: '8,50€' },
+  { name: 'Queso curado de oveja', price: '7,00€' },
+  { name: 'Lomo de orza', price: '5,00€' },
+  { name: 'Tomatito con vinagreta de aguacate', price: '6,00€' },
+  { name: 'Adobo', price: '7,00€' },
+  { name: 'Croquetas', price: '6,00€' },
+  { name: 'Rabo de toro', price: '6,00€' },
+  { name: 'Bacalao', price: '6,00€' },
+  { name: 'Jamón', price: '6,00€' },
+  { name: 'Chocos', price: '7,00€' },
+  { name: 'Caracoles', price: '4,50€' },
+  { name: 'Pimentada con atún (fuera de carta)', price: '4,50€' },
 ];
 
 const MenuComida = () => {
@@ -23,51 +29,28 @@ const MenuComida = () => {
     <section className="py-20 bg-sand-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="font-script text-5xl md:text-6xl font-bold text-ocean mb-2">Carta de Comida</h1>
-          <p className="text-muted-foreground">Tapas clásicas y raciones para compartir</p>
+          <h1 className="font-script text-5xl md:text-6xl font-bold text-ocean mb-2">Tapas y Raciones</h1>
+          <p className="text-muted-foreground">Clásicos para compartir y disfrutar</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="shadow-soft">
-            <CardHeader>
-              <div className="flex items-center gap-2 text-ocean">
-                <Utensils className="w-5 h-5" />
-                <CardTitle>Tapas Clásicas</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {tapasClasicas.map((item, index) => (
-                <div key={index} className="border-b border-sand last:border-b-0 pb-3 last:pb-0">
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-medium text-foreground">{item.name}</h4>
-                    <span className="font-semibold text-ocean">{item.price}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+        <Card className="shadow-soft">
+          <CardHeader>
+            <div className="flex items-center gap-2 text-ocean">
+              <Utensils className="w-5 h-5" />
+              <CardTitle>Tapas y Raciones</CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {tapasYRaciones.map((item, index) => (
+              <div key={index} className="border-b border-sand last:border-b-0 pb-3 last:pb-0">
+                <div className="flex justify-between items-start mb-1">
+                  <h4 className="font-medium text-foreground">{item.name}</h4>
+                  <span className="font-semibold text-ocean">{item.price}</span>
                 </div>
-              ))}
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-soft">
-            <CardHeader>
-              <div className="flex items-center gap-2 text-ocean">
-                <Utensils className="w-5 h-5" />
-                <CardTitle>Raciones</CardTitle>
               </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {raciones.map((item, index) => (
-                <div key={index} className="border-b border-sand last:border-b-0 pb-3 last:pb-0">
-                  <div className="flex justify-between items-start mb-1">
-                    <h4 className="font-medium text-foreground">{item.name}</h4>
-                    <span className="font-semibold text-ocean">{item.price}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </div>
+            ))}
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
